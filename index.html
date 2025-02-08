@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Errores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="Imagenes/Logo.jpg" alt="Logo de la aplicación" style="max-width: 200px; margin-bottom: 20px;">
+    </header>
+    
+    <div class="container">
+        <h2>Calculadora de Errores</h2>
+        <label for="numDatos">¿Cuántos datos deseas ingresar?</label>
+        <input type="number" id="numDatos" min="1" step="1" required>
+        <button onclick="generarCampos()">Aceptar</button>
+        
+        <div id="datosContainer"></div>
+        
+        <button id="calcularBtn" onclick="calcularErrores()" style="display: none;">Calcular</button>
+        <button id="borrarBtn" onclick="borrarCampos()" style="display: none; background-color: #dc3545;">Borrar</button>
+        
+        <div class="result">
+            <h3>Resultados:</h3>
+            <p id="errorAbsoluto"></p>
+            <p id="errorRelativo"></p>
+            <img src="Imagenes/excito.png" alt="Éxito" style="width: 50px; margin-top: 20px;">
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
